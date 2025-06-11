@@ -5,7 +5,6 @@ import { cn } from "@/lib/utils";
 import { PlusIcon } from "@radix-ui/react-icons";
 import { getThreads } from "@/lib/api";
 import { Thread } from "@/lib/types";
-import Link from "next/link";
 import ChatRow from "@/components/ChatRow";
 
 const Sidebar = () => {
