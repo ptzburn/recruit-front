@@ -1,7 +1,7 @@
 import axios from "axios";
 import { ChatResponse, Thread } from "./types";
 
-const API_BASE_URL = process.env.API_BASE_URL as string; // Adjust to your backend URL
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL as string; // Adjust to your backend URL
 
 export async function startNewChat(message: string): Promise<ChatResponse> {
   const response = await axios.post(API_BASE_URL, { message });
