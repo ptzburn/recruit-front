@@ -1,11 +1,11 @@
 import ChatInterface from "@/components/ChatInterface";
 
 interface ChatPageProps {
-  params: { threadId: string };
+  params: Promise<{ threadId: string }>;
 }
 
-const ChatPage = ({ params }: ChatPageProps) => {
-  const { threadId } = params;
+const ChatPage = async ({ params }: ChatPageProps) => {
+  const { threadId } = await params; // Resolve the Promise
 
   return (
     <div className="flex-1 overflow-hidden">
